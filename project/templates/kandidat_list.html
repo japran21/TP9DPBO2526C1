@@ -1,0 +1,43 @@
+<section class="page-header">
+    <div>
+        <h1 class="page-title">Daftar Kandidat Karyawan</h1>
+        <p class="page-subtitle">Kelola data pelamar, skor evaluasi tes, serta pengalaman kerja kandidat.</p>
+    </div>
+    <a class="btn btn-primary" href="index.php?module=kandidat&amp;screen=add">+ Tambah Kandidat</a>
+</section>
+
+<section class="stats-grid" aria-label="Ringkasan Kandidat">
+    <article class="stat-card">
+        <span class="stat-label">Total Kandidat</span>
+        <strong class="stat-value">{{TOTAL_KANDIDAT}}</strong>
+    </article>
+    <article class="stat-card">
+        <span class="stat-label">Rata-rata Skor Tes</span>
+        <strong class="stat-value">{{RATA_SKOR}}</strong>
+    </article>
+    <article class="stat-card">
+        <span class="stat-label">Rata-rata Pengalaman</span>
+        <strong class="stat-value">{{RATA_PENGALAMAN}}</strong>
+    </article>
+</section>
+
+<section class="card">
+    <div class="table-wrap">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Kandidat</th>
+                    <th>Posisi Dilamar</th>
+                    <th>Domisili</th>
+                    <th>Skor Tes</th>
+                    <th>Pengalaman</th>
+                    <th class="col-actions">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ROWS}}
+            </tbody>
+        </table>
+    </div>
+</section>

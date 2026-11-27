@@ -1,0 +1,58 @@
+<section class="page-header">
+    <div>
+        <h1 class="page-title">{{FORM_TITLE}}</h1>
+        <p class="page-subtitle">{{FORM_SUBTITLE}}</p>
+    </div>
+    <a class="btn btn-secondary" href="index.php?module=lowongan">&larr; Kembali ke Daftar</a>
+</section>
+
+<section class="card form-card">
+    <form method="POST" action="index.php" class="form-grid">
+        <input type="hidden" name="module" value="lowongan">
+        <input type="hidden" name="action" value="{{ACTION_VALUE}}">
+        {{HIDDEN_ID_INPUT}}
+
+        <div class="form-group">
+            <label for="judulPosisi">Judul Posisi</label>
+            <input type="text" id="judulPosisi" name="judulPosisi" value="{{JUDUL_POSISI}}" placeholder="Contoh: Backend Developer" maxlength="100" required>
+        </div>
+
+        <div class="form-row-2">
+            <div class="form-group">
+                <label for="departemen">Departemen</label>
+                <input type="text" id="departemen" name="departemen" value="{{DEPARTEMEN}}" placeholder="Contoh: Engineering" maxlength="100" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lokasi">Lokasi</label>
+                <input type="text" id="lokasi" name="lokasi" value="{{LOKASI}}" placeholder="Contoh: Bandung" maxlength="100" required>
+            </div>
+        </div>
+
+        <div class="form-row-3">
+            <div class="form-group">
+                <label for="tipeKerja">Tipe Kerja</label>
+                <select id="tipeKerja" name="tipeKerja" required>
+                    {{TIPE_KERJA_OPTIONS}}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="kuota">Kuota Posisi</label>
+                <input type="number" id="kuota" name="kuota" value="{{KUOTA}}" min="1" max="100" placeholder="Minimal 1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status Lowongan</label>
+                <select id="status" name="status" required>
+                    {{STATUS_OPTIONS}}
+                </select>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <a class="btn btn-secondary" href="index.php?module=lowongan">Batal</a>
+            <button type="submit" class="btn btn-primary">{{SUBMIT_LABEL}}</button>
+        </div>
+    </form>
+</section>

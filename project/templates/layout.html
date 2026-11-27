@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAGE_TITLE}}</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="brand" href="index.php">
+                <span class="brand-badge">HR</span>
+                <div>
+                    <span class="brand-title">TalentHub HR</span>
+                    <span class="brand-sub">Portal Rekrutmen MVP Strict Passive</span>
+                </div>
+            </a>
+            <nav class="nav-tabs" aria-label="Modul Rekrutmen">
+                <a class="nav-tab {{NAV_KANDIDAT_CLASS}}" href="index.php?module=kandidat">Data Kandidat</a>
+                <a class="nav-tab {{NAV_LOWONGAN_CLASS}}" href="index.php?module=lowongan">Lowongan Kerja</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        {{ALERT}}
+        {{CONTENT}}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span>Sistem Rekrutmen HR &bull; Arsitektur Model&ndash;View&ndash;Presenter (Strict Passive View)</span>
+        </div>
+    </footer>
+</body>
+</html>

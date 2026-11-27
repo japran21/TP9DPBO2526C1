@@ -1,0 +1,47 @@
+<section class="page-header">
+    <div>
+        <h1 class="page-title">{{FORM_TITLE}}</h1>
+        <p class="page-subtitle">{{FORM_SUBTITLE}}</p>
+    </div>
+    <a class="btn btn-secondary" href="index.php?module=kandidat">&larr; Kembali ke Daftar</a>
+</section>
+
+<section class="card form-card">
+    <form method="POST" action="index.php" class="form-grid">
+        <input type="hidden" name="module" value="kandidat">
+        <input type="hidden" name="action" value="{{ACTION_VALUE}}">
+        {{HIDDEN_ID_INPUT}}
+
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" value="{{NAMA}}" placeholder="Contoh: Raka Pratama" maxlength="100" required>
+        </div>
+
+        <div class="form-group">
+            <label for="posisi">Posisi Dilamar</label>
+            <input type="text" id="posisi" name="posisi" value="{{POSISI}}" placeholder="Contoh: Backend Developer" maxlength="100" required>
+        </div>
+
+        <div class="form-group">
+            <label for="domisili">Domisili</label>
+            <input type="text" id="domisili" name="domisili" value="{{DOMISILI}}" placeholder="Contoh: Bandung" maxlength="100" required>
+        </div>
+
+        <div class="form-row-2">
+            <div class="form-group">
+                <label for="skorTes">Skor Tes (0 - 100)</label>
+                <input type="number" id="skorTes" name="skorTes" value="{{SKOR_TES}}" min="0" max="100" placeholder="0 - 100" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pengalamanTahun">Pengalaman (Tahun)</label>
+                <input type="number" id="pengalamanTahun" name="pengalamanTahun" value="{{PENGALAMAN_TAHUN}}" min="0" max="50" placeholder="Contoh: 2" required>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <a class="btn btn-secondary" href="index.php?module=kandidat">Batal</a>
+            <button type="submit" class="btn btn-primary">{{SUBMIT_LABEL}}</button>
+        </div>
+    </form>
+</section>
