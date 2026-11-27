@@ -46,22 +46,8 @@ TP 9/
                                
 ```
 
-## Desain Program
-
-### 1. Arsitektur MVP — Strict Passive View
-
-Aplikasi memisahkan tanggung jawab menjadi tiga lapisan yang berkomunikasi melalui **interface (contract)**:
-
-```mermaid
-flowchart LR
-    Router["index.php (Router & Composition Root)"] --> PK["PresenterKandidat / PresenterLowongan"]
-    PK -->|"KontrakModelKandidat / KontrakModelLowongan"| Model["TabelKandidat / TabelLowongan"]
-    Model --> DB["DB (PDO Prepared Statement)"]
-    Model --> Entity["Kandidat / Lowongan"]
-    PK -->|"KontrakViewKandidat / KontrakViewLowongan"| View["ViewKandidat / ViewLowongan"]
-    View --> TR["TemplateRenderer + templates/*.html"]
-```
-
+# Desain
+## 1.
 **Penerapan aturan Strict Passive View:**
 - **View Pasif (*Dumb View*):** Direktori `project/views/` dan `project/templates/` **tidak** memiliki `require_once` ke file Model maupun Entity, **tidak** mengandung `foreach`, dan **tidak** memanggil `count()`.
 - **Komunikasi Berbasis Kontrak:** Presenter hanya bergantung pada interface `KontrakModel*` dan `KontrakView*`, serta mengimplementasikan `KontrakPresenter*`. Instansiasi implementasi konkret dilakukan hanya pada composition root (`project/index.php`).
